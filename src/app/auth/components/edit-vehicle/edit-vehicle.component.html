@@ -1,4 +1,3 @@
-
 <div class="container">
     <router-outlet></router-outlet>
 
@@ -13,20 +12,20 @@
                     <form [formGroup]="updateForm" (ngSubmit)="update()">
                         <div class="mb-3">
                             <label for="vehicleType" class="form-label">Type</label>
-                            <input type="text" formControlName="type" class="form-control" id="vehicleType" aria-describedby="emailHelp"
-                                placeholder="Enter Vehicle Type">
+                            <input type="text" formControlName="type" class="form-control" id="vehicleType"
+                                aria-describedby="emailHelp" placeholder="Enter Vehicle Type">
                         </div>
                         <div class="mb-3">
                             <label for="vehicleModel" class="form-label">Model</label>
-                            <input type="text" formControlName="model" class="form-control" id="vehicleModel" aria-describedby="emailHelp"
-                                placeholder="Enter Vehicle Model">
+                            <input type="text" formControlName="model" class="form-control" id="vehicleModel"
+                                aria-describedby="emailHelp" placeholder="Enter Vehicle Model">
                         </div>
                         <div class="mb-3">
                             <label for="vehiclePrice" class="form-label">Price</label>
-                            <input type="number" formControlName="price" formControlName="model" class="form-control" id="vehiclePrice"
-                                aria-describedby="emailHelp" placeholder="Enter Vehicle Price">
+                            <input type="number" formControlName="price" formControlName="model" class="form-control"
+                                id="vehiclePrice" aria-describedby="emailHelp" placeholder="Enter Vehicle Price">
                         </div>
-                    
+
                     </form>
                 </div>
                 <div class="footer">

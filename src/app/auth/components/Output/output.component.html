@@ -11,6 +11,8 @@
                 <th scope="col">Model</th>
                 <th scope="col">Price</th>
                 <th scope="col">Function</th>
+                <th><button type="button" class="btn btn-outline-danger btn-rounded waves-effect "><i
+                            class="fas fa-trash" aria-hidden="true"></i>Delete</button></th>
             </tr>
         </thead>
         <tbody>
@@ -20,18 +22,19 @@
                 <td>Lamborghini Aventador LP700-4</td>
                 <td>$399,500</td>
                 <td>
-                    <button type="button" class="btn btn-outline-success btn-rounded waves-effect"><i class="fas fa-heart"
-                            aria-hidden="true"></i>Favorite</button>
-    
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-info btn-rounded waves-effect mx-2">
+                    <button type="button" class="btn btn-outline-success btn-rounded waves-effect"><i
+                            class="fas fa-heart" aria-hidden="true"></i>Favorite</button>
+
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        class="btn btn-outline-info btn-rounded waves-effect mx-2">
                         <a [routerLink]="['/edit']">
                             <i class="fas fa-pen" aria-hidden="true"></i>Edit
                         </a>
                     </button>
-    
-                    <button type="button" class="btn btn-outline-danger btn-rounded waves-effect "><i class="fas fa-trash"
-                            aria-hidden="true"></i>Delete</button>
-    
+
+                    <button type="button" class="btn btn-outline-danger btn-rounded waves-effect "><i
+                            class="fas fa-trash" aria-hidden="true"></i>Delete</button>
+
                 </td>
             </tr>
         </tbody>
