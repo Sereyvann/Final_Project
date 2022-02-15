@@ -1,0 +1,15 @@
+.modal-content{
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    background-color: #9DBCB1;
+}
+.form-control{
+    background-color: #d7e0dd;
+    border-radius: 20px;
+}
+
+.button{
+   border-radius: 100px;
+}
