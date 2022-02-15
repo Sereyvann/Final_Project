@@ -11,26 +11,26 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
-  // formValue !: FormGroup;
-  //constructor(private formbuilder: FormBuilder,private http: HttpClient,  private router: Router) { }
-  constructor() { }
+  vehicleForm !: FormGroup;
+  constructor(private formbuilder: FormBuilder,private http: HttpClient,  private router: Router) { }
+
 
   ngOnInit(): void {
+  
+    this.vehicleForm = this.formbuilder.group({
+      id: [''],
+      type: [''],
+      model: [''],
+      price: [''],
+
+    })
   }
-    // this.formValue = this.formbuilder.group({
-    //   name: [''],
-    //   model: [''],
-    //   price: [''],
-    //   year: [''],
-
-    // }) 
-
-//   postVehicleDetails() {
-//     this.http.post<any>("http://localhost:3000/vehicleForm", this.formValue.value).subscribe(res => {
-//       alert("Vehicle Added Successfully");
-//       this.formValue.reset();
-//       this.router.navigate(['output']);
-//     })
-//   }
+  insert() {
+    this.http.post<any>("http://localhost:3000/vehicleForm", this.vehicleForm.value).subscribe(res => {
+      alert("Vehicle Added Successfully");
+      this.vehicleForm.reset();
+      this.router.navigate(['output']);
+    })
+  }
 
 }

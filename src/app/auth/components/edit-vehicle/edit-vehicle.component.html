@@ -10,7 +10,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form [formGroup]="updateForm" (ngSubmit)="update()">
                         <div class="mb-3">
                             <label for="vehicleType" class="form-label">Type</label>
                             <input type="text" formControlName="type" class="form-control" id="vehicleType" aria-describedby="emailHelp"

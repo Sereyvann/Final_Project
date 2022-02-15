@@ -9,7 +9,7 @@
 
     <div class="card">
     <div class="card-body">
-        <form>
+        <form [formGroup]="vehicleForm" (ngSubmit)="insert()">
             <div class="mb-3">
                 <label for="vehicleID" class="form-label">ID</label>
                 <input type="number" formControlName="id" class="form-control" id="vehicleID" placeholder="Enter Vehicle ID">
@@ -20,7 +20,7 @@
             </div>
             <div class="mb-3">
                 <label for="vehicleModel" class="form-label">Model</label>
-                <input type="text" class="form-control" id="vehicleModel" aria-describedby="emailHelp" placeholder="Enter Vehicle Model">
+                <input type="text" formControlName="model" class="form-control" id="vehicleModel" aria-describedby="emailHelp" placeholder="Enter Vehicle Model">
             </div>
             <div class="mb-3">
                 <label for="vehiclePrice" class="form-label">Price</label>

@@ -9,18 +9,12 @@
                 </div>
         
                 <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    
                     <div class="mb-3">
                         <label for="signUpUsername" class="form-label">Username</label>
                         <input type="text" formControlName="username" class="form-control" id="signUpUsername" placeholder="Enter Your Username">
                     </div>
-                    <div class="mb-3">
-                        <label for="signUpPhoneNum" class="form-label">Phone Number</label>
-                        <input type="number" formControlName="phoneNum" class="form-control" id="signUpPhoneNum" placeholder="Enter Your Phone Number">
-                    </div>
-                    <div class="mb-3">
-                        <label for="signUpEmail" class="form-label">Email</label>
-                        <input type="email" formControlName="email" class="form-control" id="signUpEmail" placeholder="Enter Your Email">
-                    </div>
+                    
                     <div class="mb-3">
                         <label for="signUpPassword" class="form-label">Password</label>
                         <input type="password" formControlName="password" class="form-control" id="signUpPassword" placeholder="Enter Your Password">
