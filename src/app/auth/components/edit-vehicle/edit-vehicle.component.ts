@@ -17,7 +17,6 @@ export class EditVehicleComponent implements OnInit {
   ngOnInit(): void {
 
     this.updateForm = this.formbuilder.group({
-      id: [''],
       type: [''],
       model: [''],
       price: [''],
@@ -25,11 +24,16 @@ export class EditVehicleComponent implements OnInit {
     })
   }
   update() {
-    this.http.post<any>("http://localhost:3000/vehicleForm", this.updateForm.value).subscribe(res => {
-      alert("Vehicle Added Successfully");
-      this.updateForm.reset();
-      this.router.navigate(['output']);
-    })
+
+    console.log(this.updateForm.value.type)
+    console.log(this.updateForm.value.model)
+    console.log(this.updateForm.value.price)
+
+    // this.http.post<any>("http://localhost:3000/vehicleForm", this.updateForm.value).subscribe(res => {
+    //   alert("Vehicle Added Successfully");
+    //   this.updateForm.reset();
+    //   this.router.navigate(['output']);
+    // })
   }
 
 }

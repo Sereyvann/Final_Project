@@ -26,6 +26,13 @@ export class FormComponent implements OnInit {
     })
   }
   insert() {
+    console.log(this.vehicleForm.value.id)
+    console.log(this.vehicleForm.value.type)
+    console.log(this.vehicleForm.value.model)
+    console.log(this.vehicleForm.value.price)
+
+
+
     this.http.post<any>("http://localhost:3000/vehicleForm", this.vehicleForm.value).subscribe(res => {
       alert("Vehicle Added Successfully");
       this.vehicleForm.reset();

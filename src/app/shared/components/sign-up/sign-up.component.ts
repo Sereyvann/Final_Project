@@ -20,13 +20,14 @@ export class SignUpComponent implements OnInit {
     });
   }
   signUp() {
+    console.log(this.signupForm.value.username)
+    console.log(this.signupForm.value.password)
     this.http.post<any>("http://localhost:3000/signUpUsers", this.signupForm.value).subscribe(res=> {
       alert("Sign Up Successfully");
       this.signupForm.reset();
-      this.router.navigate(['login']);
+      this.router.navigate(['dashboard']);
     }, err => {
       alert("Something Went Wrong")
     })
   }
-
 }
